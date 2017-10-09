@@ -174,7 +174,7 @@ function install(callback) {
     req.on('error', callback.bind(null, "Error downloading from URL: " + opts.url));
     req.on('response', function (res) {
         if (res.statusCode !== 200) return callback("Error downloading binary. HTTP Status Code: " + res.statusCode);
-        req.pipe(fs.createWriteStream(opts.binPath));
+        req.pipe(fs.createWriteStream(opts.binPath + '/' + opts.binName));
     });
 }
 
