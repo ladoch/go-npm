@@ -22,7 +22,7 @@ const ARCH_MAPPING = {
 const PLATFORM_MAPPING = {
     "darwin": "osx",
     "linux": "linux",
-    "win32": "wind.exe"
+    "win32": "win.exe"
 };
 
 function getInstallationPath(callback) {
